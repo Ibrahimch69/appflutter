@@ -1,4 +1,5 @@
 import 'package:appflutter/widgets/button_exo2.dart';
+import 'package:appflutter/widgets/login_exo3.dart';
 import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -10,7 +11,7 @@ class AcademyPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ButtonExo2(),
+      body: Connexion(),
     );
   }
 }

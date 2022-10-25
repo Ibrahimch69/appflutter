@@ -7,12 +7,12 @@ class Cardexo1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: Card(
           child: ListTile(
-            title: const Text("ibrahim"),
-            subtitle: const Text("ssss"),
+            title: Text("ibrahim"),
+            subtitle: Text("ssss"),
             trailing: Chip(
               label: Text("soumis"),
               backgroundColor: Color.fromARGB(255, 255, 153, 70),

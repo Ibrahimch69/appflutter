@@ -10,43 +10,42 @@ class ButtonExo2 extends StatefulWidget {
 }
 
 class _ButtonExo2State extends State<ButtonExo2> {
-  late bool isRed = true;
+  bool isRed = true;
+  bool isGreen = true;
 
   @override
   void initState() {
     super.initState();
   }
 
-  void changecolor() {
+  void changeColor() {
     setState(() {
       isRed = !isRed;
     });
   }
 
-  void changeIcon(){
-    setState(() {
-      logo = !logo;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return Row(children: [
+      InkWell(
         onTap: () {
-          changecolor();
-          print("le container is red ? $isRed");
+          changeColor();
         },
         child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: isRed ? Colors.red : Colors.green,
+          ),
           width: 500,
           height: 500,
-          color: isRed ? Colors.red : Colors.blue,
           child: Column(
-            children: [
-            Icon(
-              logo ? 'validate' : 'Refuse',
-              style
-            )
-          ],) ? 
-        ));
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Icon(isRed ? Icons.delete : Icons.check),
+                Text(isRed ? 'Refusé' : 'Validé')
+              ]),
+        ),
+      ),
+    ]);
   }
 }
