@@ -6,7 +6,7 @@ import 'package:get/get_state_manager/src/simple/get_view.dart';
 
 import 'getx_exo4_controller.dart';
 
-class Getxexo4 extends GetView<Getxexo4Controller> {
+class Getxexo4 extends GetView<Getxexo4controller> {
   const Getxexo4({super.key});
 
   @override
